@@ -11,7 +11,8 @@ public class SearchPurchaseSingleCommandProcessor implements MenuSingleCommandPr
 
     @Override
     public void processCommand() {
-        System.out.println("search purchase...");
+        // TODO write this feature in future...
+        System.out.println("search purchase...write code here");
     }
 
     @Override

@@ -1,6 +1,8 @@
 package ru.getlab.services;
 
 import ru.getlab.exceptions.MenuItemIndexOutOfBoundsException;
+import ru.getlab.exceptions.NoSuchFruitException;
+import ru.getlab.exceptions.PurchaseAmountFormatException;
 import ru.getlab.services.menu.MenuOption;
 import ru.getlab.services.menu.MenuOptionsRegistry;
 import ru.getlab.services.processors.MenuCommandProcessor;
@@ -32,9 +34,13 @@ public class ApplicationRunner {
                 processMenuCommand(selectedMenuItem);
 
             } catch (NumberFormatException e) {
-                ioService.outputString("Input number error. You should input only single digit");
+                ioService.outputString("Input only one digit corresponding to menu item");
             } catch (MenuItemIndexOutOfBoundsException e) {
-                ioService.outputString("Invalid option number. No such menu item. Pay attention");
+                ioService.outputString("Invalid menu item");
+            } catch (NoSuchFruitException e) {
+                ioService.outputString("No such fruit in our shop");
+            } catch (PurchaseAmountFormatException e) {
+                ioService.outputString("Invalid amount of fruit in your purchase");
             }
         }
     }

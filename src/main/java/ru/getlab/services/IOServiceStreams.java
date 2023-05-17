@@ -25,4 +25,10 @@ public class IOServiceStreams implements IOService {
     public void outputString(String s) {
         output.println(s);
     }
+
+    @Override
+    public String readStringWithPrompt(String prompt) {
+        outputString(prompt);
+        return input.nextLine();
+    }
 }
