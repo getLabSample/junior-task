@@ -7,6 +7,9 @@ import ru.getlab.services.processors.*;
 
 import java.util.List;
 
+/**
+ * This is start point of application. Here we initialize everything and run application runner.
+ */
 public class Main {
     public static void main(String[] args) {
         var applicationStopService = new ApplicationStopService();
@@ -29,8 +32,10 @@ public class Main {
                         historyWriter, ioService),
                 new ShowPurchaseHistorySingleCommandProcessor(showPurchaseHistoryMenuOption,
                         historyLoader, ioService),
-                new SearchPurchaseSingleCommandProcessor(searchPurchaseMenuOption),
-                new StopApplicationSingleCommandProcessor(applicationStopService, stopApplicationMenuOption)
+                new SearchPurchaseSingleCommandProcessor(searchPurchaseMenuOption,
+                        ioService, historyLoader),
+                new StopApplicationSingleCommandProcessor(applicationStopService,
+                        stopApplicationMenuOption)
         );
 
         MenuCommandProcessor menuCommandProcessor = new MenuCommandProcessor(processors);

@@ -9,6 +9,9 @@ import ru.getlab.services.processors.MenuCommandProcessor;
 
 import java.util.Comparator;
 
+/**
+ * This is our Application Runner, here is the main interaction loop.
+ */
 public class ApplicationRunner {
 
     private final IOService ioService;
@@ -16,6 +19,13 @@ public class ApplicationRunner {
     private final MenuOptionsRegistry menuOptionRegistry;
     private final MenuCommandProcessor commandsProcessor;
 
+    /**
+     * Constructor with all necessary parameters.
+     * @param ioService
+     * @param applicationStopService
+     * @param menuOptionsRegistry
+     * @param commandsProcessor
+     */
     public ApplicationRunner(IOService ioService,
                              ApplicationStopService applicationStopService,
                              MenuOptionsRegistry menuOptionsRegistry,

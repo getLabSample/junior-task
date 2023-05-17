@@ -2,6 +2,9 @@ package ru.getlab.model;
 
 import java.time.LocalDateTime;
 
+/**
+ * Entity that describes single purchase.
+ */
 public class Purchase {
     private final String id;
     private final LocalDateTime creationTime;

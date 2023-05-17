@@ -1,11 +1,12 @@
 package ru.getlab.services;
 
-import ru.getlab.services.processors.InputService;
-
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+/**
+ * Implementation of communication with user.
+ */
 public class IOServiceStreams implements IOService {
 
     private final PrintStream output;

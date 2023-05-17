@@ -7,6 +7,9 @@ import java.math.BigDecimal;
 
 import static ru.getlab.services.processors.utils.PurchaseUtils.*;
 
+/**
+ * Actions for make single purchase.
+ */
 public class MakePurchaseSingleCommandProcessor implements MenuSingleCommandProcessor {
     private final MenuOption processedCommandOption;
     private final HistoryWriter historyWriter;
@@ -23,7 +26,7 @@ public class MakePurchaseSingleCommandProcessor implements MenuSingleCommandProc
     @Override
     public void processCommand() {
         String userInput =
-                inputService.readStringWithPrompt("Choose fruit and amount (for example, apple 4)");
+                inputService.readStringWithPrompt("Choose fruit and amount (for example, Apple 4):");
         checkPurchase(userInput);
         historyWriter.writePurchaseToFile(calculateTotalPrice(userInput));
     }

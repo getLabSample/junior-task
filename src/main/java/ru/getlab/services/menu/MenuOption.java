@@ -1,5 +1,8 @@
 package ru.getlab.services.menu;
 
+/**
+ * Entity that describes single menu item.
+ */
 public class MenuOption {
     private final int id;
     private final String description;

@@ -2,6 +2,9 @@ package ru.getlab.services;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * Service for correct shutting down application.
+ */
 public class ApplicationStopService {
 
     private final AtomicBoolean executionFlag;

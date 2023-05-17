@@ -3,6 +3,9 @@ package ru.getlab.services.processors;
 import ru.getlab.services.HistoryLoader;
 import ru.getlab.services.menu.MenuOption;
 
+/**
+ * Actions for show to user all purchase history.
+ */
 public class ShowPurchaseHistorySingleCommandProcessor implements MenuSingleCommandProcessor {
     private final MenuOption processedCommandOption;
     private final HistoryLoader historyLoader;

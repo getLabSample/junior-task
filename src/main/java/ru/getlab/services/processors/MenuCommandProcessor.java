@@ -8,6 +8,9 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+/**
+ * Here we realize which process should be further.
+ */
 public class MenuCommandProcessor {
     private final Map<MenuOption, MenuSingleCommandProcessor> processors;
 

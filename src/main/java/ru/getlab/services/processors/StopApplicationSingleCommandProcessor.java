@@ -3,6 +3,9 @@ package ru.getlab.services.processors;
 import ru.getlab.services.ApplicationStopService;
 import ru.getlab.services.menu.MenuOption;
 
+/**
+ * Actions for stop application.
+ */
 public class StopApplicationSingleCommandProcessor implements MenuSingleCommandProcessor {
     private final MenuOption processedCommandOption;
     private final ApplicationStopService applicationStopService;
