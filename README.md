@@ -17,3 +17,5 @@
 
 # FAQ
 Процедура fork и pull request необходима для оценки затраченного времени на выполнение задачи.
+
+(here I just wrote smth to make pull request)
